@@ -3,23 +3,23 @@
 # Please see http://wiki.centos.org/SpecialInterestGroup/Storage for more
 # information
 
-[centos-ceph-luminous]
+[centos-ceph-nautilus]
 name=CentOS-$releasever - Ceph Luminous
-baseurl=http://mirror.centos.org/$contentdir/$releasever/storage/$basearch/ceph-luminous/
+baseurl=http://mirror.centos.org/$contentdir/$releasever/storage/$basearch/ceph-nautilus/
 gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
 
-[centos-ceph-luminous-test]
+[centos-ceph-nautilus-test]
 name=CentOS-$releasever - Ceph Luminous Testing
-baseurl=http://buildlogs.centos.org/centos/$releasever/storage/$basearch/ceph-luminous/
+baseurl=http://buildlogs.centos.org/centos/$releasever/storage/$basearch/ceph-nautilus/
 gpgcheck=0
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
 
-[centos-ceph-luminous-source]
+[centos-ceph-nautilus-source]
 name=CentOS-$releasever - Ceph Luminous Source
-baseurl=http://vault.centos.org/$contentdir/$releasever/storage/Source/ceph-luminous/
+baseurl=http://vault.centos.org/$contentdir/$releasever/storage/Source/ceph-nautilus/
 gpgcheck=0
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage

@@ -1,10 +1,10 @@
-Summary: Ceph Luminous packages from the CentOS Storage SIG repository
-Name: centos-release-ceph-luminous
+Summary: Ceph Nautilus packages from the CentOS Storage SIG repository
+Name: centos-release-ceph-nautilus
 Version: 1.1
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
-Source0: CentOS-Ceph-Luminous.repo
+Source0: CentOS-Ceph-Nautilus.repo
 
 BuildArch: noarch
 
@@ -14,21 +14,23 @@ Requires: centos-release >= 7-5.1804.el7.centos.2
 Requires: centos-release-storage-common
 
 # Users can install centos-release-ceph to get the latest
-Provides: centos-release-ceph = 12.2
-Conflicts: centos-release-ceph < 12.2
-Obsoletes: centos-release-ceph < 12.2
+Provides: centos-release-ceph = 14.0
+Conflicts: centos-release-ceph < 14.0
+Obsoletes: centos-release-ceph < 14.0
 
 %description
-yum configuration for Ceph Luminous as delivered via the CentOS Storage SIG.
+yum configuration for Ceph Nautilus as delivered via the CentOS Storage SIG.
 
 %install
-install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Ceph-Luminous.repo
+install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Ceph-Nautilus.repo
 
 %files
-%defattr(-,root,root)
-%config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Ceph-Luminous.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Ceph-Nautilus.repo
 
 %changelog
+* Tue Dec 04 2018 Ken Dreyer <kdreyer@redhat.com> - 1.1-3
+- Bumping for Nautilus
+
 * Tue Jul 31 2018 Niels de Vos <ndevos@redhat.com> - 1.1-2
 - Require centos-release that contains the $contentdir YUM variable
 

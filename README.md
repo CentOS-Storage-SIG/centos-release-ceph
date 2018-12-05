@@ -9,11 +9,6 @@ packages land at the right tag for inclusion in CentOS Extras:
 
 Building the package can be done like this:
 
-    $ rpmbuild -bs \
-               --define "_sourcedir $PWD" --define "_srcrpmdir $PWD" \
-               --define "dist .el7.centos" \
-               centos-release-ceph-nautilus.spec
+    $ make srpm DISTRO=el7
 
-    $ cbs \
-           build core7-extras-common-el7.centos \
-           centos-release-ceph-nautilus-1.1-3.el7.centos.src.rpm
+    $ make build DISTRO=el7

@@ -1,7 +1,7 @@
 Summary: Ceph Nautilus packages from the CentOS Storage SIG repository
 Name: centos-release-ceph-nautilus
 Version: 1.1
-Release: 5%{?dist}
+Release: 6%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
 Source0: CentOS-Ceph-Nautilus.repo
@@ -28,6 +28,10 @@ install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Ceph-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Ceph-Nautilus.repo
 
 %changelog
+* Mon Dec 17 2018 Ken Dreyer <kdreyer@redhat.com> - 1.1-6
+- Use HTTPS for buildlogs.centos.org
+- Enable GPG-checking for centos-ceph-nautilus-source
+
 * Wed Dec 05 2018 Anssi Johansson <avij@centosproject.org> - 1.1-5
 - Use mirrorlist.c.o instead of mirror.c.o
 

@@ -1,6 +1,6 @@
 # CentOS-Ceph-Nautilus.repo
 #
-# Please see http://wiki.centos.org/SpecialInterestGroup/Storage for more
+# Please see https://wiki.centos.org/SpecialInterestGroup/Storage for more
 # information
 
 [centos-ceph-nautilus]
@@ -13,7 +13,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
 
 [centos-ceph-nautilus-test]
 name=CentOS-$releasever - Ceph Nautilus Testing
-baseurl=http://buildlogs.centos.org/centos/$releasever/storage/$basearch/ceph-nautilus/
+baseurl=https://buildlogs.centos.org/centos/$releasever/storage/$basearch/ceph-nautilus/
 gpgcheck=0
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
@@ -21,6 +21,6 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
 [centos-ceph-nautilus-source]
 name=CentOS-$releasever - Ceph Nautilus Source
 baseurl=http://vault.centos.org/$contentdir/$releasever/storage/Source/ceph-nautilus/
-gpgcheck=0
+gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage

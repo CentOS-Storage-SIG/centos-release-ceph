@@ -1,4 +1,4 @@
-centos-release-ceph-nautilus provides the YUM repository file for packages of
+`centos-release-ceph-nautilus` provides the YUM repository file for packages of
 the CentOS Storage SIG that are used with Ceph Nautilus (14.2.x).
 
 This package needs to get built against the following targets so that the

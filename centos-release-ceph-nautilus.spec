@@ -12,6 +12,7 @@ BuildArch: noarch
 Requires: centos-release >= 7-5.1804.el7.centos.2
 # This provides the public key to verify the RPMs
 Requires: centos-release-storage-common
+Requires: centos-release-nfs-ganesha28
 
 # Users can install centos-release-ceph to get the latest
 Provides: centos-release-ceph = 14.0

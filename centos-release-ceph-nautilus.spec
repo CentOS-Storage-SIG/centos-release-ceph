@@ -1,7 +1,7 @@
 Summary: Ceph Nautilus packages from the CentOS Storage SIG repository
 Name: centos-release-ceph-nautilus
-Version: 1.1
-Release: 6%{?dist}
+Version: 1.2
+Release: 1%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
 Source0: CentOS-Ceph-Nautilus.repo

@@ -1,7 +1,7 @@
 Summary: Ceph Nautilus packages from the CentOS Storage SIG repository
 Name: centos-release-ceph-nautilus
 Version: 1.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
 Source0: CentOS-Ceph-Nautilus.repo
@@ -29,6 +29,12 @@ install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Ceph-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Ceph-Nautilus.repo
 
 %changelog
+* Wed Jun 19 2019 Giulio Fidente <gfidente@redhat.com> - 1.2-2
+* Update changelog as necessary to document changes in 1.2-1
+
+* Tue Jun 18 2019 Giulio Fidente <gfidente@redhat.com> - 1.2-1
+- Add centos-release-nfs-ganesha28 to the RPM Requires
+
 * Mon Dec 17 2018 Ken Dreyer <kdreyer@redhat.com> - 1.1-6
 - Use HTTPS for buildlogs.centos.org
 - Enable GPG-checking for centos-ceph-nautilus-source

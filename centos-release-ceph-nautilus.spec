@@ -1,7 +1,7 @@
 Summary: Ceph Nautilus packages from the CentOS Storage SIG repository
 Name: centos-release-ceph-nautilus
 Version: 1.2
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
 Source0: CentOS-Ceph-Nautilus.repo
@@ -29,6 +29,9 @@ install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Ceph-
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Ceph-Nautilus.repo
 
 %changelog
+* Mon Feb 10 2020 Giulio Fidente <gfidente@redhat.com> - 1.2-3
+* Add case in Makefile to support el8
+
 * Wed Jun 19 2019 Giulio Fidente <gfidente@redhat.com> - 1.2-2
 * Update changelog as necessary to document changes in 1.2-1
 

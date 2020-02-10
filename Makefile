@@ -29,8 +29,14 @@ $(SRPM):
 		$(NAME).spec
 
 build: $(SRPM)
-	# XXX: remove hard-coded "7" here:
-	cbs build core7-extras-common-$(DISTRO).centos $(SRPM) && \
-	cbs tag-build core7-extras-common-testing $(NVR)
+	ifeq ($(DISTRO),el8)
+		# XXX: remove hard-coded "8" here:
+		cbs build core8-extras-common-$(DISTRO).centos $(SRPM) && \
+		cbs tag-build core8-extras-common-testing $(NVR)
+	else
+		# XXX: remove hard-coded "7" here:
+		cbs build core7-extras-common-$(DISTRO).centos $(SRPM) && \
+		cbs tag-build core7-extras-common-testing $(NVR)
+	endif
 
 .PHONY: all build srpm

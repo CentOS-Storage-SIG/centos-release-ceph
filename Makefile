@@ -5,6 +5,8 @@ ifndef DISTRO
 endif
 
 
+OS_VERSION = $(subst el,,${DISTRO})
+
 DIST := ".${DISTRO}.centos"
 
 VERSION := $(shell rpmspec \
@@ -29,14 +31,7 @@ $(SRPM):
 		$(NAME).spec
 
 build: $(SRPM)
-	ifeq ($(DISTRO),el8)
-		# XXX: remove hard-coded "8" here:
-		cbs build core8-extras-common-$(DISTRO).centos $(SRPM) && \
-		cbs tag-build core8-extras-common-testing $(NVR)
-	else
-		# XXX: remove hard-coded "7" here:
-		cbs build core7-extras-common-$(DISTRO).centos $(SRPM) && \
-		cbs tag-build core7-extras-common-testing $(NVR)
-	endif
+	echo cbs build core$(OS_VERSION)-extras-common-$(DISTRO).centos $(SRPM) && \
+	echo cbs tag-build core$(OS_VERSION)-extras-common-testing $(NVR)
 
 .PHONY: all build srpm

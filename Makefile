@@ -31,6 +31,8 @@ $(SRPM):
 		$(NAME).spec
 
 build: $(SRPM)
+	# el8 currently fails to build because the CBS admins have not yet set
+	# up the tags and target. https://bugs.centos.org/view.php?id=17041
 	echo cbs build core$(OS_VERSION)-extras-common-$(DISTRO).centos $(SRPM) && \
 	echo cbs tag-build core$(OS_VERSION)-extras-common-testing $(NVR)
 

@@ -1,7 +1,7 @@
 NAME = centos-release-ceph-nautilus
 
 ifndef DISTRO
-  $(error DISTRO is undefined, set to "el7")
+  $(error DISTRO is undefined, set to "el7" or "el8")
 endif
 
 

@@ -12,3 +12,5 @@ Building the package can be done like this:
     $ make srpm DISTRO=el7
 
     $ make build DISTRO=el7
+
+We are working on el8 support at https://bugs.centos.org/view.php?id=17041
